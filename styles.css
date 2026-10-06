@@ -415,16 +415,49 @@ textarea {
   background: #fff;
 }
 
-.partner-track {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.partner-carousel {
+  overflow: hidden;
+  padding: 0.5rem 0;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.partner-track,
+.partner-set {
+  display: flex;
+  width: max-content;
   align-items: center;
+}
+
+.partner-track {
+  animation: partner-scroll 32s linear infinite;
+}
+
+.partner-carousel:hover .partner-track,
+.partner-carousel:focus-within .partner-track {
+  animation-play-state: paused;
+}
+
+.partner-set {
   gap: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@keyframes partner-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .partner-logo {
   display: grid;
   place-items: center;
+  flex: 0 0 235px;
   min-height: 130px;
   padding: 1rem;
   border: 1px solid var(--border);
@@ -840,8 +873,8 @@ blockquote footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .partner-track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .partner-logo {
+    flex-basis: 210px;
   }
 
   .main-nav {
@@ -891,9 +924,16 @@ blockquote footer {
   .process-grid,
   .contact-grid,
   .about-grid,
-  .field-row,
-  .partner-track {
+  .field-row {
     grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    flex-direction: column;
+  }
+
+  .partner-logo {
+    flex-basis: 180px;
   }
 
   .hero-content {
@@ -930,5 +970,30 @@ blockquote footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .partner-carousel {
+    overflow-x: auto;
+    mask-image: none;
+  }
+
+  .partner-track {
+    width: 100%;
+    animation: none;
+  }
+
+  .partner-set {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .partner-set[aria-hidden="true"] {
+    display: none;
+  }
+
+  .partner-logo {
+    flex-basis: min(40%, 235px);
   }
 }
