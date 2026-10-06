@@ -850,11 +850,55 @@ blockquote footer {
 }
 
 .footer-inner {
+  padding-top: 3rem;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-brand .brand {
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  max-width: 340px;
+  margin: 0;
+}
+
+.footer-contact h2 {
+  margin: 0 0 0.8rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer-contact address {
+  display: grid;
+  gap: 0.4rem;
+  font-style: normal;
+}
+
+.footer-contact a:hover,
+.footer-inner nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 90px;
+  min-height: 72px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 .footer-inner nav {
@@ -994,11 +1038,21 @@ blockquote footer {
     max-width: 100%;
   }
 
-  .footer-inner {
+  .footer-bottom {
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 1rem 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin: 0 auto;
   }
 }
 
