@@ -27,11 +27,10 @@
           <span class="icon">✉</span>
           <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>
         </div>
-        <div class="topbar-socials" aria-label="Social media links">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Google+">G+</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="Instagram">◎</a>
+        <div class="topbar-socials">
+          <a href="https://wa.me/250788310540" aria-label="Chat with Zahabu Media on WhatsApp">
+            WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -59,8 +58,8 @@
       </div>
     </header>
 
-    <main id="home">
-      <section class="hero">
+    <main>
+      <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <p class="eyebrow">Creative media production</p>
@@ -76,18 +75,18 @@
             <a class="btn btn-secondary" href="#portfolio">View our work</a>
           </div>
 
-          <div class="hero-stats" aria-label="Key business metrics">
+          <div class="hero-stats" aria-label="Company highlights">
             <div>
-              <strong>2020</strong>
-              <span>Founded</span>
+              <strong data-count="2020">2020</strong>
+              <span>Established</span>
             </div>
             <div>
-              <strong>100+</strong>
-              <span>Campaigns</span>
+              <strong data-count="326">326</strong>
+              <span>Projects completed</span>
             </div>
             <div>
-              <strong>Rwanda</strong>
-              <span>Headquartered</span>
+              <strong data-count="856">856</strong>
+              <span>Clients served</span>
             </div>
           </div>
         </div>
@@ -111,11 +110,17 @@
               society organizations to build media and event solutions tailored
               to audience needs and project objectives.
             </p>
+            <h3 class="about-subheading">Our mission</h3>
+            <p>
+              To blend creativity and strategy in high-impact media solutions
+              that help clients communicate effectively and achieve measurable
+              results.
+            </p>
             <ul class="check-list">
-              <li>Strategic communication campaigns</li>
-              <li>Video, radio, and digital storytelling</li>
-              <li>Event planning and execution</li>
-              <li>Audience-focused content delivery</li>
+              <li>Creativity</li>
+              <li>Excellence</li>
+              <li>Integrity</li>
+              <li>Collaboration</li>
             </ul>
           </div>
 
@@ -201,50 +206,121 @@
         </div>
       </section>
 
+      <section class="partners section" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="section-header narrow">
+            <p class="section-tag">Working together</p>
+            <h2 id="partners-title">Selected partners</h2>
+            <p>Organizations featured among our clients and collaborators.</p>
+          </div>
+          <div class="partner-track" aria-label="Selected partner logos">
+            <div class="partner-logo">
+              <img src="assets/images/client.png" alt="Partner organization logo" loading="lazy" />
+            </div>
+            <div class="partner-logo">
+              <img src="assets/images/client2.png" alt="Inzozi Lotto logo" loading="lazy" />
+            </div>
+            <div class="partner-logo">
+              <img src="assets/images/client3.png" alt="Kosmotive logo" loading="lazy" />
+            </div>
+            <div class="partner-logo">
+              <img src="assets/images/client5.png" alt="Association of Microfinance Institutions in Rwanda logo" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="portfolio section" id="portfolio">
         <div class="container">
           <div class="section-header">
             <p class="section-tag">Our work</p>
-            <h2>Selected projects that combine storytelling with real-world impact.</h2>
+            <h2>Real stories and campaigns made with our partners.</h2>
+            <p>Explore selected work and watch the featured productions.</p>
+          </div>
+
+          <div class="portfolio-filters" role="group" aria-label="Filter projects">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+            <button class="filter-button" type="button" data-filter="production" aria-pressed="false">Audio &amp; video</button>
+            <button class="filter-button" type="button" data-filter="campaign" aria-pressed="false">Campaigns</button>
+            <button class="filter-button" type="button" data-filter="community" aria-pressed="false">Community</button>
           </div>
 
           <div class="portfolio-grid">
-            <article class="project-card">
+            <article class="project-card" data-category="production">
               <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
-                alt="Public awareness campaign"
+                src="https://www.zahabumedia.com/assets/images/project/project_2.jpg"
+                alt="Kosmotive radio drama production"
+                loading="lazy"
               />
               <div class="project-info">
-                <span>Campaign</span>
-                <h3>Public Awareness Initiative</h3>
-                <p>Behavior change storytelling through media, outreach, and community engagement.</p>
+                <span>Radio drama · 2024–2025</span>
+                <h3>Radio Drama — Kosmotive</h3>
+                <p>
+                  A menstrual hygiene series encouraging open dialogue and the
+                  use of reusable sanitary products across Rwanda.
+                </p>
+                <button class="project-link" type="button" data-video-open="JKqgh2Ebd88" data-video-title="Radio Drama — Kosmotive">
+                  Watch project <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="production">
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-                alt="Corporate event production"
+                src="https://www.zahabumedia.com/assets/images/project/project_3.jpg"
+                alt="Intore mu Mikino radio drama project"
+                loading="lazy"
               />
               <div class="project-info">
-                <span>Event</span>
-                <h3>Corporate Launch Experience</h3>
-                <p>Brand storytelling and stakeholder engagement for a high-impact launch event.</p>
+                <span>Radio drama · 2022</span>
+                <h3>Intore mu Mikino — Kina Rwanda</h3>
+                <p>
+                  Radio dramas promoting learning through play as a key part of
+                  child development.
+                </p>
+                <button class="project-link" type="button" data-video-open="HC5o-UcumWA" data-video-title="Intore mu Mikino — Kina Rwanda">
+                  Watch project <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="community">
               <img
-                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
-                alt="Production studio work"
+                src="https://www.zahabumedia.com/assets/images/project/project_4.jpg"
+                alt="AfriYAN Rwanda community outreach caravan"
+                loading="lazy"
               />
               <div class="project-info">
-                <span>Production</span>
-                <h3>Video Storytelling Series</h3>
-                <p>Short-form content designed to increase visibility, engagement, and message retention.</p>
+                <span>Community outreach · 2025</span>
+                <h3>AfriYAN Rwanda Outreach Caravan</h3>
+                <p>
+                  A branded outreach tour through Karongi, Nyamasheke, and
+                  Rusizi with local performers and entertainment.
+                </p>
+                <a class="project-link" href="#contact">Ask us about this project <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="campaign">
+              <img
+                src="https://www.zahabumedia.com/assets/images/project/project_5.jpg"
+                alt="Hanga Akazi disability awareness campaign"
+                loading="lazy"
+              />
+              <div class="project-info">
+                <span>Awareness campaign · 2024</span>
+                <h3>Hanga Akazi — Disability Awareness</h3>
+                <p>
+                  Radio dramas and live shows challenging disability stigma
+                  and promoting inclusive employment.
+                </p>
+                <button class="project-link" type="button" data-video-open="x5cRm4IABSo" data-video-title="Hanga Akazi — Disability Awareness Campaign">
+                  Watch project <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
           </div>
+          <p class="portfolio-empty" hidden>No projects in this category yet.</p>
         </div>
       </section>
 
@@ -280,26 +356,6 @@
         </div>
       </section>
 
-      <section class="testimonials section">
-        <div class="container">
-          <div class="section-header narrow">
-            <p class="section-tag">Testimonials</p>
-            <h2>What clients say about working with us.</h2>
-          </div>
-
-          <div class="testimonial-grid">
-            <blockquote>
-              “Zahabu Media brought clarity, creativity, and professionalism to our communications strategy. The campaign became a strong catalyst for engagement.”
-              <footer>— Project Lead, NGO Partnership</footer>
-            </blockquote>
-            <blockquote>
-              “Their team understood our audience and translated complex ideas into content that truly resonated. The event execution was outstanding.”
-              <footer>— Marketing Manager, Private Sector Client</footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
       <section class="contact section" id="contact">
         <div class="container contact-grid">
           <div class="contact-copy">
@@ -330,31 +386,34 @@
             <div class="field-row">
               <label>
                 <span>First name</span>
-                <input type="text" name="firstName" placeholder="First name" />
+                <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" required />
               </label>
               <label>
                 <span>Last name</span>
-                <input type="text" name="lastName" placeholder="Last name" />
+                <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name" required />
               </label>
             </div>
 
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="Email address" />
+              <input type="email" name="email" placeholder="Email address" autocomplete="email" required />
             </label>
 
             <label>
               <span>Phone</span>
-              <input type="tel" name="phone" placeholder="Phone number" />
+              <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" />
             </label>
 
             <label>
               <span>Message</span>
-              <textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
+              <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
             </label>
 
             <button type="submit" class="btn btn-primary">Send message</button>
-            <p class="form-status" aria-live="polite"></p>
+            <p class="form-status" aria-live="polite">
+              Submitting opens a message in your email app. You can also email
+              <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>.
+            </p>
           </form>
         </div>
       </section>
@@ -372,6 +431,16 @@
         </nav>
       </div>
     </footer>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+      <div class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+        <div class="video-dialog-header">
+          <h2 id="videoTitle"></h2>
+          <button class="video-close" type="button" aria-label="Close video">Close</button>
+        </div>
+        <div class="video-frame"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
