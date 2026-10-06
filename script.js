@@ -8,6 +8,29 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+  const updateBackToTop = () => {
+    const isVisible = window.scrollY > 400;
+    backToTop.classList.toggle('is-visible', isVisible);
+    backToTop.setAttribute('aria-hidden', String(!isVisible));
+    backToTop.tabIndex = isVisible ? 0 : -1;
+  };
+
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'auto'
+        : 'smooth',
+    });
+  });
+}
+
 if (navToggle && mainNav) {
   const closeNav = () => {
     mainNav.classList.remove('open');
