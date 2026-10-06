@@ -138,36 +138,49 @@ textarea {
 }
 
 .topbar-socials {
+  display: flex;
+  align-items: center;
   gap: 1.1rem;
 }
 
-.social-icon {
+.social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
   color: #89858d;
-  font-family: Arial, sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.facebook-mark {
-  font-family: Arial, sans-serif;
-  font-size: 1.3rem;
+.social-link:hover {
+  color: var(--primary-dark);
+  background: rgba(93, 78, 178, 0.1);
+  transform: translateY(-2px);
 }
 
-.google-plus-mark {
-  width: auto;
-  font-size: 1rem;
-  letter-spacing: -0.08em;
+.social-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.linkedin-mark {
-  font-size: 1rem;
-  letter-spacing: -0.08em;
+.social-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-link[href*="instagram"] .social-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.social-link[href*="instagram"] .icon-fill {
+  fill: currentColor;
+  stroke: none;
 }
 
 .twitter-mark {
