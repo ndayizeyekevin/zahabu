@@ -87,6 +87,131 @@ if ('IntersectionObserver' in window) {
 const counters = document.querySelectorAll('[data-count]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const hero = document.querySelector('.hero');
+const heroTrack = document.querySelector('.hero-track');
+const heroSlides = heroTrack ? [...heroTrack.querySelectorAll('.hero-slide')] : [];
+const heroDots = [...document.querySelectorAll('[data-hero-slide]')];
+const heroPrev = document.querySelector('[data-hero-prev]');
+const heroNext = document.querySelector('[data-hero-next]');
+const heroPause = document.querySelector('[data-hero-pause]');
+
+if (
+  hero &&
+  heroTrack &&
+  heroSlides.length > 1 &&
+  heroDots.length === heroSlides.length &&
+  heroPrev &&
+  heroNext &&
+  heroPause
+) {
+  let activeSlide = 0;
+  let rotationTimer = null;
+  let manuallyPaused = reduceMotion;
+  let pointerInside = false;
+  let focusInside = false;
+
+  const stopRotation = () => {
+    window.clearInterval(rotationTimer);
+    rotationTimer = null;
+  };
+
+  const startRotation = () => {
+    if (
+      reduceMotion ||
+      manuallyPaused ||
+      pointerInside ||
+      focusInside ||
+      document.hidden ||
+      rotationTimer
+    ) {
+      return;
+    }
+
+    rotationTimer = window.setInterval(() => {
+      showSlide(activeSlide + 1);
+    }, 6000);
+  };
+
+  const updatePauseButton = () => {
+    heroPause.disabled = reduceMotion;
+    heroPause.setAttribute(
+      'aria-label',
+      reduceMotion
+        ? 'Automatic image rotation disabled by reduced-motion setting'
+        : manuallyPaused
+          ? 'Resume slideshow'
+          : 'Pause slideshow'
+    );
+    heroPause.setAttribute('aria-pressed', String(manuallyPaused));
+    heroPause.querySelector('use').setAttribute(
+      'href',
+      manuallyPaused ? '#icon-play' : '#icon-pause'
+    );
+  };
+
+  function showSlide(index) {
+    activeSlide = (index + heroSlides.length) % heroSlides.length;
+    heroTrack.style.transform = `translateX(-${activeSlide * 100}%)`;
+
+    heroDots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeSlide;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-pressed', String(isActive));
+    });
+  }
+
+  const goToSlide = (index) => {
+    showSlide(index);
+    stopRotation();
+    startRotation();
+  };
+
+  heroPrev.addEventListener('click', () => goToSlide(activeSlide - 1));
+  heroNext.addEventListener('click', () => goToSlide(activeSlide + 1));
+  heroDots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      goToSlide(Number(dot.dataset.heroSlide));
+    });
+  });
+
+  heroPause.addEventListener('click', () => {
+    manuallyPaused = !manuallyPaused;
+    updatePauseButton();
+    stopRotation();
+    startRotation();
+  });
+
+  hero.addEventListener('mouseenter', () => {
+    pointerInside = true;
+    stopRotation();
+  });
+  hero.addEventListener('mouseleave', () => {
+    pointerInside = false;
+    startRotation();
+  });
+  hero.addEventListener('focusin', () => {
+    focusInside = true;
+    stopRotation();
+  });
+  hero.addEventListener('focusout', (event) => {
+    if (!hero.contains(event.relatedTarget)) {
+      focusInside = false;
+      startRotation();
+    }
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopRotation();
+    } else {
+      startRotation();
+    }
+  });
+
+  showSlide(0);
+  updatePauseButton();
+  startRotation();
+}
+
 if ('IntersectionObserver' in window && counters.length) {
   const countObserver = new IntersectionObserver(
     (entries, observer) => {

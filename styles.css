@@ -97,6 +97,13 @@ textarea {
   gap: 0.7rem;
 }
 
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
 .topbar-item a,
 .topbar-socials a {
   color: var(--ink);
@@ -223,22 +230,125 @@ textarea {
   min-height: 760px;
   display: flex;
   align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  isolation: isolate;
   color: var(--white);
+}
+
+.hero-slider,
+.hero-track {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slider {
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hero-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.hero-slide {
+  position: relative;
+  inset: auto;
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: -1;
   background: rgba(11, 9, 17, 0.47);
+  pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   padding: 5rem 0 3rem;
+}
+
+.hero-controls {
+  position: absolute;
+  right: max(1.5rem, calc((100vw - 1180px) / 2));
+  bottom: 2rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.hero-control,
+.hero-dot {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(17, 14, 27, 0.38);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-control {
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 50%;
+}
+
+.hero-control:hover,
+.hero-dot:hover,
+.hero-dot.active {
+  border-color: #fff;
+  background: rgba(93, 78, 178, 0.9);
+}
+
+.hero-control:hover {
+  transform: scale(1.06);
+}
+
+.hero-control .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: currentColor;
+}
+
+.hero-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0 0.1rem;
+}
+
+.hero-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.hero-dot.active {
+  transform: scale(1.2);
+}
+
+.hero-control:focus-visible,
+.hero-dot:focus-visible {
+  outline: 3px solid #e2bc46;
+  outline-offset: 3px;
 }
 
 .eyebrow {
@@ -1090,6 +1200,11 @@ blockquote footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0.75rem 0;
+  }
+
+  .topbar-contact {
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
   }
 
   .site-header {
