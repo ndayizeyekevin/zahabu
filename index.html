@@ -17,18 +17,91 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3.1a2 2 0 0 1-.6 1.7L7.1 10.4a16 16 0 0 0 6.5 6.5l1.9-1.9a2 2 0 0 1 1.7-.6l3.1.5a2 2 0 0 1 1.7 2Z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path d="M20.5 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-4.8A8.5 8.5 0 1 1 20.5 11.5Z" />
+        <path d="M8.2 7.8c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.3-.7 1.8-.5.5-1.2.8-2 .8-.6 0-1.4-.2-2.8-.8-2.3-1-4-3.5-4.2-3.8-.1-.2-.9-1.2-.9-2.3s.5-1.6.7-1.8Z" />
+      </symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="M12 19V5m-7 7 7-7 7 7" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="m8 5 12 7-12 7V5Z" />
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M16 3v4M8 3v4M3 10h18" />
+      </symbol>
+      <symbol id="icon-video" viewBox="0 0 24 24">
+        <rect x="3" y="6" width="13" height="12" rx="2" />
+        <path d="m16 10 5-3v10l-5-3" />
+      </symbol>
+      <symbol id="icon-megaphone" viewBox="0 0 24 24">
+        <path d="m3 11 15-6v14L3 13v-2Zm0 2 2 7h5l-2-5m10-7a4 4 0 0 1 0 8" />
+      </symbol>
+      <symbol id="icon-radio" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="14" rx="2" />
+        <path d="m4 7 13-4M7 11h7M7 15h.01M11 15h.01m5 0h.01" />
+        <circle cx="18" cy="12" r="1" />
+      </symbol>
+      <symbol id="icon-bullhorn" viewBox="0 0 24 24">
+        <path d="M3 10v4h4l12 5V5L7 10H3Zm4 4 2 7h4l-2-6m10-8 2-2m-2 14 2 2" />
+      </symbol>
+      <symbol id="icon-event" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M16 3v4M8 3v4M3 10h18m-12 4h.01M12 14h.01M15 14h.01M9 18h.01M12 18h.01" />
+      </symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m6-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6-7.8a4 4 0 0 1 0 7.6m2 4.2a4 4 0 0 1 4 4v2" />
+      </symbol>
+      <symbol id="icon-lightbulb" viewBox="0 0 24 24">
+        <path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2Z" />
+      </symbol>
+      <symbol id="icon-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="m16.2 7.8-2.6 5.8-5.8 2.6 2.6-5.8 5.8-2.6Z" />
+      </symbol>
+      <symbol id="icon-design" viewBox="0 0 24 24">
+        <path d="m15 5 4 4m-2-6 5 5L8 22H3v-5L17 3a2.1 2.1 0 0 1 3 0Z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24">
+        <path d="m8 12 3 3a2 2 0 0 0 3-3l-2-2m-3 2-2 2a2 2 0 0 1-3-3l4-4a4 4 0 0 1 5 0l1 1m2-1 4 4a2 2 0 0 1-3 3m-8 1 2 2a2 2 0 0 0 3-3m2-1 1 1a2 2 0 0 0 3-3M3 8l3-3 3 2m12 1-3-3-3 2" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </symbol>
+    </svg>
+
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-item">
-          <span class="icon">☎</span>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
           <a href="tel:+250788310540">+250 788 310 540</a>
         </div>
         <div class="topbar-item">
-          <span class="icon">✉</span>
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
           <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>
         </div>
         <div class="topbar-socials">
           <a href="https://wa.me/250788310540" aria-label="Chat with Zahabu Media on WhatsApp">
+            <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
             WhatsApp
           </a>
         </div>
@@ -43,9 +116,7 @@
         </a>
 
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
         </button>
 
         <nav class="main-nav" aria-label="Main navigation">
@@ -62,7 +133,10 @@
       <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-          <p class="eyebrow">Creative media production</p>
+          <p class="eyebrow">
+            <svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg>
+            Creative media production
+          </p>
           <h1>Creative Media<br />Production</h1>
           <p class="hero-copy">
             We are your strategic communication and media partner—crafting
@@ -71,8 +145,14 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Book a discovery call</a>
-            <a class="btn btn-secondary" href="#portfolio">View our work</a>
+            <a class="btn btn-primary" href="#contact">
+              <svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>
+              Book a discovery call
+            </a>
+            <a class="btn btn-secondary" href="#portfolio">
+              <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
+              View our work
+            </a>
           </div>
 
           <div class="hero-stats" aria-label="Company highlights">
@@ -95,7 +175,10 @@
       <section class="about section" id="about">
         <div class="container about-grid">
           <div class="about-copy">
-            <p class="section-tag">About us</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-people"></use></svg>
+              About us
+            </p>
             <h2>We turn ideas into memorable stories and experiences.</h2>
             <p>
               Founded in 2020 and headquartered in Kigali, Rwanda, Zahabu Media
@@ -110,17 +193,20 @@
               society organizations to build media and event solutions tailored
               to audience needs and project objectives.
             </p>
-            <h3 class="about-subheading">Our mission</h3>
+            <h3 class="about-subheading">
+              <svg class="icon" aria-hidden="true"><use href="#icon-lightbulb"></use></svg>
+              Our mission
+            </h3>
             <p>
               To blend creativity and strategy in high-impact media solutions
               that help clients communicate effectively and achieve measurable
               results.
             </p>
             <ul class="check-list">
-              <li>Creativity</li>
-              <li>Excellence</li>
-              <li>Integrity</li>
-              <li>Collaboration</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Creativity</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Excellence</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Integrity</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg>Collaboration</li>
             </ul>
           </div>
 
@@ -144,13 +230,16 @@
       <section class="services section" id="services">
         <div class="container">
           <div class="section-header">
-            <p class="section-tag">Our services</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-compass"></use></svg>
+              Our services
+            </p>
             <h2>Creative solutions for brands, NGOs, and impact-driven organizations.</h2>
           </div>
 
           <div class="services-grid">
             <article class="service-card">
-              <div class="icon-wrap">🎬</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg></div>
               <h3>Audio-Visual Content Development</h3>
               <p>
                 High-quality storytelling across video, audio, and digital media
@@ -159,7 +248,7 @@
             </article>
 
             <article class="service-card">
-              <div class="icon-wrap">📢</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-compass"></use></svg></div>
               <h3>Media Strategy & Planning</h3>
               <p>
                 Research-led campaign planning that sharpens messaging, reach,
@@ -168,7 +257,7 @@
             </article>
 
             <article class="service-card">
-              <div class="icon-wrap">📻</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-radio"></use></svg></div>
               <h3>Radio & Video Production</h3>
               <p>
                 End-to-end production from scripting and shooting to editing,
@@ -177,7 +266,7 @@
             </article>
 
             <article class="service-card">
-              <div class="icon-wrap">📡</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-bullhorn"></use></svg></div>
               <h3>Media Buying & Outreach</h3>
               <p>
                 Smart media placements and strategic outreach to maximize reach,
@@ -186,7 +275,7 @@
             </article>
 
             <article class="service-card">
-              <div class="icon-wrap">🎉</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-event"></use></svg></div>
               <h3>Event Design & Management</h3>
               <p>
                 Seamless planning and delivery for launches, community events,
@@ -195,7 +284,7 @@
             </article>
 
             <article class="service-card">
-              <div class="icon-wrap">💬</div>
+              <div class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-people"></use></svg></div>
               <h3>Public Engagement Campaigns</h3>
               <p>
                 Integrated communication campaigns that build awareness,
@@ -209,7 +298,10 @@
       <section class="partners section" aria-labelledby="partners-title">
         <div class="container">
           <div class="section-header narrow">
-            <p class="section-tag">Working together</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-handshake"></use></svg>
+              Working together
+            </p>
             <h2 id="partners-title">Selected partners</h2>
             <p>Organizations featured among our clients and collaborators.</p>
           </div>
@@ -251,16 +343,28 @@
       <section class="portfolio section" id="portfolio">
         <div class="container">
           <div class="section-header">
-            <p class="section-tag">Our work</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg>
+              Our work
+            </p>
             <h2>Real stories and campaigns made with our partners.</h2>
             <p>Explore selected work and watch the featured productions.</p>
           </div>
 
           <div class="portfolio-filters" role="group" aria-label="Filter projects">
             <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All projects</button>
-            <button class="filter-button" type="button" data-filter="production" aria-pressed="false">Audio &amp; video</button>
-            <button class="filter-button" type="button" data-filter="campaign" aria-pressed="false">Campaigns</button>
-            <button class="filter-button" type="button" data-filter="community" aria-pressed="false">Community</button>
+            <button class="filter-button" type="button" data-filter="production" aria-pressed="false">
+              <svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg>
+              Audio &amp; video
+            </button>
+            <button class="filter-button" type="button" data-filter="campaign" aria-pressed="false">
+              <svg class="icon" aria-hidden="true"><use href="#icon-megaphone"></use></svg>
+              Campaigns
+            </button>
+            <button class="filter-button" type="button" data-filter="community" aria-pressed="false">
+              <svg class="icon" aria-hidden="true"><use href="#icon-people"></use></svg>
+              Community
+            </button>
           </div>
 
           <div class="portfolio-grid">
@@ -278,7 +382,8 @@
                   use of reusable sanitary products across Rwanda.
                 </p>
                 <button class="project-link" type="button" data-video-open="JKqgh2Ebd88" data-video-title="Radio Drama — Kosmotive">
-                  Watch project <span aria-hidden="true">↗</span>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
+                  Watch project
                 </button>
               </div>
             </article>
@@ -297,7 +402,8 @@
                   child development.
                 </p>
                 <button class="project-link" type="button" data-video-open="HC5o-UcumWA" data-video-title="Intore mu Mikino — Kina Rwanda">
-                  Watch project <span aria-hidden="true">↗</span>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
+                  Watch project
                 </button>
               </div>
             </article>
@@ -315,7 +421,10 @@
                   A branded outreach tour through Karongi, Nyamasheke, and
                   Rusizi with local performers and entertainment.
                 </p>
-                <a class="project-link" href="#contact">Ask us about this project <span aria-hidden="true">↗</span></a>
+                <a class="project-link" href="#contact">
+                  Ask us about this project
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </a>
               </div>
             </article>
 
@@ -333,7 +442,8 @@
                   and promoting inclusive employment.
                 </p>
                 <button class="project-link" type="button" data-video-open="x5cRm4IABSo" data-video-title="Hanga Akazi — Disability Awareness Campaign">
-                  Watch project <span aria-hidden="true">↗</span>
+                  <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
+                  Watch project
                 </button>
               </div>
             </article>
@@ -345,27 +455,34 @@
       <section class="process section alt-bg">
         <div class="container">
           <div class="section-header narrow">
-            <p class="section-tag">How we work</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-compass"></use></svg>
+              How we work
+            </p>
             <h2>A streamlined process from strategy to delivery.</h2>
           </div>
 
           <div class="process-grid">
             <div class="step-card">
+              <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-compass"></use></svg></span>
               <span>01</span>
               <h3>Discover</h3>
               <p>We learn your goals, audience, and communication challenges.</p>
             </div>
             <div class="step-card">
+              <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-design"></use></svg></span>
               <span>02</span>
               <h3>Design</h3>
               <p>We build a tailored concept, message, and production roadmap.</p>
             </div>
             <div class="step-card">
+              <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg></span>
               <span>03</span>
               <h3>Produce</h3>
               <p>Our team creates content and manages execution with precision.</p>
             </div>
             <div class="step-card">
+              <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
               <span>04</span>
               <h3>Deliver</h3>
               <p>We finalize assets, launch campaigns, and support implementation.</p>
@@ -377,7 +494,10 @@
       <section class="contact section" id="contact">
         <div class="container contact-grid">
           <div class="contact-copy">
-            <p class="section-tag">Contact us</p>
+            <p class="section-tag">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+              Contact us
+            </p>
             <h2>Let’s create something impactful together.</h2>
             <p>
               Whether you need a media campaign, video production, event design,
@@ -386,15 +506,15 @@
 
             <div class="contact-points">
               <div>
-                <strong>Location</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>Location</strong>
                 <span>Kigali City, Rwanda</span>
               </div>
               <div>
-                <strong>Phone</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>Phone</strong>
                 <a href="tel:+250788310540">+250 788 310 540</a>
               </div>
               <div>
-                <strong>Email</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>Email</strong>
                 <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>
               </div>
             </div>
@@ -427,7 +547,10 @@
               <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
             </label>
 
-            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="submit" class="btn btn-primary">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+              Send message
+            </button>
             <p class="form-status" aria-live="polite">
               Submitting opens a message in your email app. You can also email
               <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>.
@@ -450,9 +573,9 @@
           <div class="footer-contact">
             <h2>Contact</h2>
             <address>
-              <a href="tel:+250788310540">+250 788 310 540</a>
-              <a href="mailto:info@zahabumedia.com">info@zahabumedia.com</a>
-              <span>Kigali City, Rwanda</span>
+              <a href="tel:+250788310540"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>+250 788 310 540</a>
+              <a href="mailto:info@zahabumedia.com"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>info@zahabumedia.com</a>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"></use></svg>Kigali City, Rwanda</span>
             </address>
           </div>
         </div>
@@ -480,7 +603,7 @@
     </div>
 
     <button class="back-to-top" type="button" aria-label="Scroll to top" aria-hidden="true" tabindex="-1">
-      <span aria-hidden="true">↑</span>
+      <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
     </button>
 
     <script src="script.js"></script>

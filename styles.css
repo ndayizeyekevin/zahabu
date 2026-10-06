@@ -104,8 +104,24 @@ textarea {
 }
 
 .icon {
-  font-size: 1.05rem;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
   color: var(--primary);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+.icon-library {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .topbar-socials {
@@ -122,6 +138,10 @@ textarea {
   background: rgba(93, 78, 178, 0.08);
   font-weight: 700;
   color: var(--primary-dark);
+}
+
+.topbar-socials .icon {
+  color: #168a56;
 }
 
 .site-header {
@@ -192,13 +212,10 @@ textarea {
   cursor: pointer;
 }
 
-.nav-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  margin: 5px 0;
-  border-radius: 999px;
+.nav-toggle .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--white);
 }
 
 .hero {
@@ -225,6 +242,9 @@ textarea {
 }
 
 .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin: 0 0 1.2rem;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.82rem;
@@ -254,6 +274,11 @@ textarea {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.hero-actions .icon,
+.contact-form .btn .icon {
+  color: currentColor;
 }
 
 .btn {
@@ -320,8 +345,15 @@ textarea {
 }
 
 .about-subheading {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   margin: 1.5rem 0 0.4rem;
   font-size: 1.25rem;
+}
+
+.about-subheading .icon {
+  color: var(--primary);
 }
 
 .about-copy p {
@@ -338,18 +370,14 @@ textarea {
 }
 
 .check-list li {
-  position: relative;
-  padding-left: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   font-weight: 600;
 }
 
-.check-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
+.check-list .icon {
   color: var(--primary);
-  font-weight: 800;
 }
 
 .about-visual {
@@ -408,6 +436,17 @@ textarea {
 .section-header > p:not(.section-tag) {
   color: var(--muted);
   margin: 0.9rem 0 0;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.section-tag .icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 .partners {
@@ -504,8 +543,14 @@ blockquote {
   place-items: center;
   border-radius: 14px;
   background: var(--primary-soft);
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.icon-wrap .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--primary-dark);
+  stroke-width: 1.9;
 }
 
 .service-card h3 {
@@ -574,6 +619,9 @@ blockquote {
 }
 
 .filter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   border: 1px solid rgba(93, 78, 178, 0.2);
   border-radius: 999px;
   padding: 0.6rem 1rem;
@@ -589,6 +637,16 @@ blockquote {
 .filter-button.active {
   background: var(--primary-dark);
   color: #fff;
+}
+
+.filter-button:hover .icon,
+.filter-button.active .icon {
+  color: #fff;
+}
+
+.filter-button .icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 .filter-button:focus-visible,
@@ -613,12 +671,13 @@ blockquote {
   cursor: pointer;
 }
 
-.project-link:hover span {
-  transform: translate(2px, -2px);
+.project-link:hover .icon {
+  transform: translateX(2px);
 }
 
-.project-link span {
-  display: inline-block;
+.project-link .icon {
+  width: 1rem;
+  height: 1rem;
   transition: transform 0.2s ease;
 }
 
@@ -709,7 +768,7 @@ blockquote {
   padding: 2rem 1.4rem;
 }
 
-.step-card span {
+.step-card > span:not(.step-icon) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -719,6 +778,20 @@ blockquote {
   background: var(--primary-soft);
   color: var(--primary-dark);
   font-weight: 800;
+}
+
+.step-icon {
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  background: var(--primary-soft);
+}
+
+.step-icon .icon {
+  color: var(--primary-dark);
 }
 
 .step-card h3 {
@@ -785,7 +858,15 @@ blockquote footer {
 }
 
 .contact-points strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--primary-dark);
+}
+
+.contact-points strong .icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 .contact-points a,
@@ -881,6 +962,19 @@ blockquote footer {
   font-style: normal;
 }
 
+.footer-contact address a,
+.footer-contact address span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.footer-contact .icon {
+  width: 1rem;
+  height: 1rem;
+  color: #bdb2ff;
+}
+
 .footer-contact a:hover,
 .footer-inner nav a:hover {
   color: #fff;
@@ -946,6 +1040,13 @@ blockquote footer {
 .back-to-top:focus-visible {
   outline: 3px solid #e2bc46;
   outline-offset: 3px;
+}
+
+.back-to-top .icon {
+  width: 1.55rem;
+  height: 1.55rem;
+  color: currentColor;
+  stroke-width: 2;
 }
 
 @media (max-width: 980px) {
