@@ -32,8 +32,14 @@
       <symbol id="icon-arrow-up" viewBox="0 0 24 24">
         <path d="M12 19V5m-7 7 7-7 7 7" />
       </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path d="M20 12H5m6 6-6-6 6-6" />
+      </symbol>
       <symbol id="icon-arrow-right" viewBox="0 0 24 24">
         <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-pause" viewBox="0 0 24 24">
+        <path d="M8 5v14M16 5v14" />
       </symbol>
       <symbol id="icon-play" viewBox="0 0 24 24">
         <path d="m8 5 12 7-12 7V5Z" />
@@ -131,6 +137,29 @@
 
     <main>
       <section class="hero" id="home">
+        <div class="hero-slider" aria-hidden="true">
+          <div class="hero-track">
+            <div class="hero-slide">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=85"
+                alt=""
+                fetchpriority="high"
+              />
+            </div>
+            <div class="hero-slide">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=85"
+                alt=""
+              />
+            </div>
+            <div class="hero-slide">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2000&q=85"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <p class="eyebrow">
@@ -169,6 +198,22 @@
               <span>Clients served</span>
             </div>
           </div>
+        </div>
+        <div class="hero-controls" role="group" aria-label="Hero image controls">
+          <button class="hero-control" type="button" data-hero-prev aria-label="Previous image">
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          </button>
+          <div class="hero-dots" role="group" aria-label="Choose hero image">
+            <button class="hero-dot active" type="button" data-hero-slide="0" aria-label="Show image 1" aria-pressed="true"></button>
+            <button class="hero-dot" type="button" data-hero-slide="1" aria-label="Show image 2" aria-pressed="false"></button>
+            <button class="hero-dot" type="button" data-hero-slide="2" aria-label="Show image 3" aria-pressed="false"></button>
+          </div>
+          <button class="hero-control" type="button" data-hero-next aria-label="Next image">
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </button>
+          <button class="hero-control hero-pause" type="button" data-hero-pause aria-label="Pause slideshow">
+            <svg class="icon" aria-hidden="true"><use href="#icon-pause"></use></svg>
+          </button>
         </div>
       </section>
 
