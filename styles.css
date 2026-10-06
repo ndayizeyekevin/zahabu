@@ -712,9 +712,12 @@ blockquote {
 
 .portfolio-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -729,13 +732,22 @@ blockquote {
 }
 
 .project-card img {
-  height: 260px;
+  flex: 0 0 auto;
   width: 100%;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  padding: 0.75rem;
+  background: #fff;
+  object-fit: contain;
+  object-position: center;
 }
 
 .project-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 1.4rem 1.2rem 1.6rem;
+  background: linear-gradient(145deg, #ad9ef0 0%, #a395e1 100%);
 }
 
 .project-info span {
@@ -756,6 +768,11 @@ blockquote {
 .project-info p {
   margin: 0;
   color: var(--muted);
+}
+
+.project-info .project-link {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .portfolio-filters {
